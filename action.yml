@@ -1,12 +1,11 @@
-name: 'instruqt'
-description: 'Publish new instruqt tracks'
+name: "instruqt"
+description: "Publish new instruqt tracks"
 inputs:
-  trackId:  # id of input
-    description: 'Which track to publish'
+  trackId: # id of input
+    description: "Which track to publish"
     required: true
-outputs:
 runs:
-  using: 'docker'
-  image: 'Dockerfile'
+  using: "docker"
+  image: "Dockerfile"
   args:
     - track push /github/workspace/${{ inputs.trackId }}
