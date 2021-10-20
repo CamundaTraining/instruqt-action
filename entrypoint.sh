@@ -1,6 +1,7 @@
 #!/bin/sh -l
 
 echo "Publishing $1"
+echo $(pwd)
 ls -l
-cd $1
+cd /github/workspace/$1
 instruqt track push
